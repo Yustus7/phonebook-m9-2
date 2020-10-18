@@ -26,6 +26,11 @@ export class ContactsService {
     return this.http.delete(this.contactPath + id)
 
   }
+
+  removePhone(id: number) {
+    return this.http.delete(this.contactPhonePath + id)
+
+  }
   addContact(contact): Observable<Contact> {
     return this.http
       .post<Contact>(this.contactPath,contact)
